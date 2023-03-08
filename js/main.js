@@ -30,3 +30,11 @@ const team = [
         foto : 'barbara-ramos-graphic-designer.jpg'
     }
 ]
+
+for ( let i = 0; i < team.length; i++){
+    const persona = team[i];
+
+    for ( let key in persona){
+        console.log(key + ': ' + persona[key]);  //stampa in console (per ogni chiave di persona), la chiave il suo valore 
+    }
+}
