@@ -31,10 +31,20 @@ const team = [
     }
 ]
 
-for ( let i = 0; i < team.length; i++){
-    const persona = team[i];
+const elementiTeam = document.getElementById('elencoMembriTeam'); //riferimento al dom
 
+for ( let i = 0; i < team.length; i++){                            //creo i div per inserire i valori dei membri
+    const element = document.createElement('div');
+    element.innerHTML = 'Membro del team: ';
+    elementiTeam.append(element);
+    
+    const persona = team[i];
+    
     for ( let key in persona){
         console.log(key + ': ' + persona[key]);  //stampa in console (per ogni chiave di persona), la chiave il suo valore 
+        element.append(persona[key] + ' ');
     }
 }
+
+
+
